@@ -1,0 +1,9 @@
+{
+	"name": "newdfdata",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cefa4300-87c2-4fcc-bfef-b74ff4994fa7",
+		"tenantId": "26d565a8-3c46-45dd-83fe-599a526a79c9"
+	}
+}
