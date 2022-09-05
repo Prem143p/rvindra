@@ -1,0 +1,35 @@
+{
+	"name": "blotobloba",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blobltobloblinkedinservice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "exceldata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Code",
+				"type": "String"
+			},
+			{
+				"name": "Description",
+				"type": "String"
+			},
+			{
+				"name": "SortOrder",
+				"type": "String"
+			}
+		]
+	}
+}
