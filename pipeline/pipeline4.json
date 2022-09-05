@@ -1,5 +1,5 @@
 {
-	"name": "pipeline3",
+	"name": "pipeline4",
 	"properties": {
 		"activities": [
 			{
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "blobdata",
+						"referenceName": "blobtoblob",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -24,7 +24,14 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
-						"recursive": true,
+						"modifiedDatetimeStart": {
+							"value": "@adddays(utcnow(),-1)",
+							"type": "Expression"
+						},
+						"modifiedDatetimeEnd": {
+							"value": "@utcNow()",
+							"type": "Expression"
+						},
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -50,14 +57,14 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@endswith(item().name,'.csv')\n",
+						"value": "@endswith(item().name,'csv')",
 						"type": "Expression"
 					}
 				}
 			},
 			{
-				"name": "ForEach1",
-				"type": "ForEach",
+				"name": "If Condition1",
+				"type": "IfCondition",
 				"dependsOn": [
 					{
 						"activity": "Filter1",
@@ -68,12 +75,22 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"items": {
-						"value": "@activity('Filter1').output.value",
+					"expression": {
+						"value": "@equals(activity('Filter1').output.value,true)",
 						"type": "Expression"
 					},
-					"isSequential": true,
-					"activities": [
+					"ifFalseActivities": [
+						{
+							"name": "Wait1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 10
+							}
+						}
+					],
+					"ifTrueActivities": [
 						{
 							"name": "Copy data1",
 							"type": "Copy",
@@ -122,13 +139,13 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DelimitedText3",
+									"referenceName": "blobtoblob",
 									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
 								{
-									"referenceName": "DelimitedText4",
+									"referenceName": "blobtoblob",
 									"type": "DatasetReference"
 								}
 							]

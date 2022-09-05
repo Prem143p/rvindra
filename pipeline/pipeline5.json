@@ -1,5 +1,5 @@
 {
-	"name": "pipeline3",
+	"name": "pipeline5",
 	"properties": {
 		"activities": [
 			{
@@ -56,8 +56,8 @@
 				}
 			},
 			{
-				"name": "ForEach1",
-				"type": "ForEach",
+				"name": "If Condition1",
+				"type": "IfCondition",
 				"dependsOn": [
 					{
 						"activity": "Filter1",
@@ -68,12 +68,22 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"items": {
-						"value": "@activity('Filter1').output.value",
+					"expression": {
+						"value": "@equals(activity('Filter1').output.value,'true')",
 						"type": "Expression"
 					},
-					"isSequential": true,
-					"activities": [
+					"ifFalseActivities": [
+						{
+							"name": "Wait1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 10
+							}
+						}
+					],
+					"ifTrueActivities": [
 						{
 							"name": "Copy data1",
 							"type": "Copy",
@@ -122,13 +132,13 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DelimitedText3",
+									"referenceName": "DelimitedText7",
 									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
 								{
-									"referenceName": "DelimitedText4",
+									"referenceName": "DelimitedText6",
 									"type": "DatasetReference"
 								}
 							]
