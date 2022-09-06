@@ -1,8 +1,8 @@
 {
-	"name": "2a",
+	"name": "1a",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage10",
+			"referenceName": "1a",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@replace(dataset().filename,'.csv','')",
+					"value": "@dataset().filename",
 					"type": "Expression"
 				},
 				"container": "exceldata"

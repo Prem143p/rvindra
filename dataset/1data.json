@@ -1,24 +1,15 @@
 {
-	"name": "2a",
+	"name": "1data",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage10",
+			"referenceName": "1data",
 			"type": "LinkedServiceReference"
-		},
-		"parameters": {
-			"filename": {
-				"type": "string"
-			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@replace(dataset().filename,'.csv','')",
-					"type": "Expression"
-				},
 				"container": "exceldata"
 			},
 			"columnDelimiter": ",",
