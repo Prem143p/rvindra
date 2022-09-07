@@ -112,7 +112,7 @@
 				"typeProperties": {
 					"variableName": "max-variable",
 					"value": {
-						"value": "@activity('Filter1').output",
+						"value": "@(int(max(variables('max-variable')))",
 						"type": "Expression"
 					}
 				}
