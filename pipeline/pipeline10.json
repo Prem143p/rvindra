@@ -57,7 +57,7 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@startswith(item().name,'book')",
+						"value": "@endswith(item().name,'.csv')",
 						"type": "Expression"
 					}
 				}
@@ -89,18 +89,47 @@
 							"typeProperties": {
 								"variableName": "my append variable",
 								"value": {
-									"value": "@item().name",
+									"value": "@string(replace(replace(item().name,'.csv',''),'.emp',''))",
 									"type": "Expression"
 								}
 							}
 						}
 					]
 				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "max-variable",
+					"value": {
+						"value": "@activity('Filter1').output",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"variables": {
 			"my append variable": {
-				"type": "Array"
+				"type": "Array",
+				"defaultValue": [
+					1,
+					2,
+					3,
+					4
+				]
+			},
+			"max-variable": {
+				"type": "String"
 			}
 		},
 		"annotations": []
