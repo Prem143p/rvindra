@@ -1,5 +1,5 @@
 {
-	"name": "pipeline6",
+	"name": "Startsnew",
 	"properties": {
 		"activities": [
 			{
@@ -24,6 +24,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"modifiedDatetimeStart": {
 							"value": "@adddays(utcnow(),-30)",
 							"type": "Expression"
@@ -53,7 +54,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output.childItemsactivity('Get Metadata1').output.childItems",
+						"value": "@activity('Get Metadata1').output.childItems",
 						"type": "Expression"
 					},
 					"isSequential": true,
