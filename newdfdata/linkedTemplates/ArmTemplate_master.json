@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "newdfdata"
 		},
+		"11092022_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of '11092022'"
+		},
 		"blobltobloblinkedinservice_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'blobltobloblinkedinservice'"
@@ -41,6 +45,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"11092022_connectionString": {
+						"value": "[parameters('11092022_connectionString')]"
 					},
 					"blobltobloblinkedinservice_connectionString": {
 						"value": "[parameters('blobltobloblinkedinservice_connectionString')]"
