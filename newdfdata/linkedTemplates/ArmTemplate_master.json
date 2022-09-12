@@ -15,6 +15,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'blobltobloblinkedinservice'"
 		},
+		"emplyeesalary_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'emplyeesalary'"
+		},
+		"emplyeesalary1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'emplyeesalary1'"
+		},
 		"sqltosqllinkedservices_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'sqltosqllinkedservices'"
@@ -51,6 +59,12 @@
 					},
 					"blobltobloblinkedinservice_connectionString": {
 						"value": "[parameters('blobltobloblinkedinservice_connectionString')]"
+					},
+					"emplyeesalary_connectionString": {
+						"value": "[parameters('emplyeesalary_connectionString')]"
+					},
+					"emplyeesalary1_connectionString": {
+						"value": "[parameters('emplyeesalary1_connectionString')]"
 					},
 					"sqltosqllinkedservices_connectionString": {
 						"value": "[parameters('sqltosqllinkedservices_connectionString')]"

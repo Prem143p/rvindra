@@ -11,6 +11,12 @@
 		"blobltobloblinkedinservice_connectionString": {
 			"value": ""
 		},
+		"emplyeesalary_connectionString": {
+			"value": ""
+		},
+		"emplyeesalary1_connectionString": {
+			"value": ""
+		},
 		"sqltosqllinkedservices_connectionString": {
 			"value": ""
 		}
