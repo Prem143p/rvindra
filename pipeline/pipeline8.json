@@ -213,6 +213,7 @@
 											"value": "@utcnow()",
 											"type": "Expression"
 										},
+										"wildcardFileName": "prem",
 										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
