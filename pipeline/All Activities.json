@@ -15,7 +15,7 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "Appendvariable",
+					"variableName": "premkumar",
 					"value": {
 						"value": "@variables('Appendvariablename')",
 						"type": "Expression"
@@ -44,6 +44,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"modifiedDatetimeStart": {
 							"value": "@adddays(utcnow(),-30)",
 							"type": "Expression"
@@ -87,6 +88,9 @@
 			"Appendvariablename": {
 				"type": "String",
 				"defaultValue": "12"
+			},
+			"premkumar": {
+				"type": "Array"
 			}
 		},
 		"annotations": []
