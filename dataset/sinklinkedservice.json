@@ -1,0 +1,21 @@
+{
+	"name": "sinklinkedservice",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sinklinkedservices",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "un-definedata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

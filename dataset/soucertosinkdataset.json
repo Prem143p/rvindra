@@ -5,21 +5,11 @@
 			"referenceName": "sinklinkedservice",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"newfilenamejsion": {
-				"type": "string",
-				"defaultValue": "newjson"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@dataset().newfilenamejsion",
-					"type": "Expression"
-				},
 				"container": "newoutput"
 			},
 			"columnDelimiter": ",",
