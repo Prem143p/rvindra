@@ -8,6 +8,9 @@
 		"11092022_connectionString": {
 			"value": ""
 		},
+		"blob_to_blob_linkedservice_copy_connectionString": {
+			"value": ""
+		},
 		"blobltobloblinkedinservice_connectionString": {
 			"value": ""
 		},
@@ -15,6 +18,24 @@
 			"value": ""
 		},
 		"emplyeesalary1_connectionString": {
+			"value": ""
+		},
+		"newcloudprem_connectionString": {
+			"value": ""
+		},
+		"newlinkedlistsource_connectionString": {
+			"value": ""
+		},
+		"newlinkedservice_connectionString": {
+			"value": ""
+		},
+		"sinklinkedservice_connectionString": {
+			"value": ""
+		},
+		"sinklinkedservices_connectionString": {
+			"value": ""
+		},
+		"sourcedatasetlinkedservice_connectionString": {
 			"value": ""
 		},
 		"sqltosqllinkedservices_connectionString": {

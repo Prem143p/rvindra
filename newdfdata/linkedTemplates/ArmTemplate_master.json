@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of '11092022'"
 		},
+		"blob_to_blob_linkedservice_copy_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'blob_to_blob_linkedservice_copy'"
+		},
 		"blobltobloblinkedinservice_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'blobltobloblinkedinservice'"
@@ -22,6 +26,30 @@
 		"emplyeesalary1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'emplyeesalary1'"
+		},
+		"newcloudprem_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'newcloudprem'"
+		},
+		"newlinkedlistsource_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'newlinkedlistsource'"
+		},
+		"newlinkedservice_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'newlinkedservice'"
+		},
+		"sinklinkedservice_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'sinklinkedservice'"
+		},
+		"sinklinkedservices_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'sinklinkedservices'"
+		},
+		"sourcedatasetlinkedservice_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'sourcedatasetlinkedservice'"
 		},
 		"sqltosqllinkedservices_connectionString": {
 			"type": "secureString",
@@ -57,6 +85,9 @@
 					"11092022_connectionString": {
 						"value": "[parameters('11092022_connectionString')]"
 					},
+					"blob_to_blob_linkedservice_copy_connectionString": {
+						"value": "[parameters('blob_to_blob_linkedservice_copy_connectionString')]"
+					},
 					"blobltobloblinkedinservice_connectionString": {
 						"value": "[parameters('blobltobloblinkedinservice_connectionString')]"
 					},
@@ -65,6 +96,24 @@
 					},
 					"emplyeesalary1_connectionString": {
 						"value": "[parameters('emplyeesalary1_connectionString')]"
+					},
+					"newcloudprem_connectionString": {
+						"value": "[parameters('newcloudprem_connectionString')]"
+					},
+					"newlinkedlistsource_connectionString": {
+						"value": "[parameters('newlinkedlistsource_connectionString')]"
+					},
+					"newlinkedservice_connectionString": {
+						"value": "[parameters('newlinkedservice_connectionString')]"
+					},
+					"sinklinkedservice_connectionString": {
+						"value": "[parameters('sinklinkedservice_connectionString')]"
+					},
+					"sinklinkedservices_connectionString": {
+						"value": "[parameters('sinklinkedservices_connectionString')]"
+					},
+					"sourcedatasetlinkedservice_connectionString": {
+						"value": "[parameters('sourcedatasetlinkedservice_connectionString')]"
 					},
 					"sqltosqllinkedservices_connectionString": {
 						"value": "[parameters('sqltosqllinkedservices_connectionString')]"
