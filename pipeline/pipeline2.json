@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "blobtoblob",
+						"referenceName": "soucertosinkdataset",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -24,6 +24,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"modifiedDatetimeStart": {
 							"value": "@adddays(utcnow(),-1)",
 							"type": "Expression"
@@ -129,13 +130,13 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "blobtoblob",
+									"referenceName": "soucertosinkdataset",
 									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
 								{
-									"referenceName": "blobtoblob",
+									"referenceName": "sinklinkedservice",
 									"type": "DatasetReference"
 								}
 							]
