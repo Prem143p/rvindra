@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "11092022",
+						"referenceName": "sinklinkedservice",
 						"type": "DatasetReference"
 					},
 					"fieldList": [

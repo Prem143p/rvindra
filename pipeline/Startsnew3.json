@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "11092022",
+						"referenceName": "soucertosinkdataset",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -73,7 +73,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"dataset": {
-									"referenceName": "11092022",
+									"referenceName": "sinklinkedservice",
 									"type": "DatasetReference"
 								},
 								"fieldList": [
@@ -174,13 +174,13 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "11092022",
+												"referenceName": "soucertosinkdataset",
 												"type": "DatasetReference"
 											}
 										],
 										"outputs": [
 											{
-												"referenceName": "110920221",
+												"referenceName": "sinklinkedservice",
 												"type": "DatasetReference"
 											}
 										]
