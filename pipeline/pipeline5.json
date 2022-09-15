@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "blobdata",
+						"referenceName": "sinklinkedservice",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -25,6 +25,10 @@
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
 						"recursive": true,
+						"modifiedDatetimeEnd": {
+							"value": "@utcnow()",
+							"type": "Expression"
+						},
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -132,13 +136,13 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DelimitedText7",
+									"referenceName": "soucertosinkdataset",
 									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
 								{
-									"referenceName": "DelimitedText6",
+									"referenceName": "sinklinkedservice",
 									"type": "DatasetReference"
 								}
 							]

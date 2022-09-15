@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "blobdata",
+						"referenceName": "soucertosinkdataset",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -25,6 +25,14 @@
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
 						"recursive": true,
+						"modifiedDatetimeStart": {
+							"value": "@adddays(utcnow(),-30)",
+							"type": "Expression"
+						},
+						"modifiedDatetimeEnd": {
+							"value": "@utcnow()",
+							"type": "Expression"
+						},
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -85,7 +93,16 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": [],
+							"userProperties": [
+								{
+									"name": "Source",
+									"value": "newoutput//"
+								},
+								{
+									"name": "Destination",
+									"value": "15-09-2022outputfolder//"
+								}
+							],
 							"typeProperties": {
 								"source": {
 									"type": "DelimitedTextSource",
@@ -102,7 +119,8 @@
 								"sink": {
 									"type": "DelimitedTextSink",
 									"storeSettings": {
-										"type": "AzureBlobStorageWriteSettings"
+										"type": "AzureBlobStorageWriteSettings",
+										"copyBehavior": "PreserveHierarchy"
 									},
 									"formatSettings": {
 										"type": "DelimitedTextWriteSettings",
@@ -122,13 +140,13 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DelimitedText3",
+									"referenceName": "soucertosinkdataset",
 									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
 								{
-									"referenceName": "DelimitedText4",
+									"referenceName": "sinklinkedservice",
 									"type": "DatasetReference"
 								}
 							]
