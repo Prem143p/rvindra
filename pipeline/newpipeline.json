@@ -189,6 +189,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Metadata1_copy1').output.childItems",
+						"type": "Expression"
+					},
 					"isSequential": true,
 					"activities": [
 						{
