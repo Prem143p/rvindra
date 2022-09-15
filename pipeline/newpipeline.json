@@ -15,6 +15,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"dataset": {
+						"referenceName": "soucertosinkdataset",
+						"type": "DatasetReference"
+					},
 					"fieldList": [
 						"childItems"
 					],
@@ -115,7 +119,8 @@
 								"sink": {
 									"type": "DelimitedTextSink",
 									"storeSettings": {
-										"type": "AzureBlobStorageWriteSettings"
+										"type": "AzureBlobStorageWriteSettings",
+										"copyBehavior": "MergeFiles"
 									},
 									"formatSettings": {
 										"type": "DelimitedTextWriteSettings",
@@ -124,7 +129,19 @@
 									}
 								},
 								"enableStaging": false
-							}
+							},
+							"inputs": [
+								{
+									"referenceName": "soucertosinkdataset",
+									"type": "DatasetReference"
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "sinklinkedservice",
+									"type": "DatasetReference"
+								}
+							]
 						}
 					]
 				}
