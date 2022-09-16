@@ -5,11 +5,20 @@
 			"referenceName": "sinklinkedservice",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"newdata": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().newdata",
+					"type": "Expression"
+				},
 				"container": "exceldata"
 			},
 			"columnDelimiter": ",",
