@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "15-09-2022outputfolder"
+				"container": "exceldata"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
